@@ -1,0 +1,32 @@
+{
+  "parent": "worldgate-conqueror:worldgates/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "worldgate-conqueror:dowsing_rod"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.worldgate-conqueror.worldgates.get_dowsing_rod.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "worldgate-conqueror:dowsing_rod"
+    },
+    "title": {
+      "translate": "advancements.worldgate-conqueror.worldgates.get_dowsing_rod.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

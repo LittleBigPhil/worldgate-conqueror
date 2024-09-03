@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "worldgate-conqueror",
+	"version": "${version}",
+	"name": "Worldgate Conqueror",
+	"description": "Travel the worldgates! Loot the worlds! Build your farms! Become the Worldgate Conqueror!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/worldgate-conqueror/icon.png",
+	"accessWidener" : "worldgate-conqueror.accesswidener",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"worldgate.conqueror.WorldgateConqueror"
+		],
+		"fabric-datagen": [
+			"worldgate.conqueror.WorldgateConquerorDataGenerator"
+		],
+		"client": [
+			"worldgate.conqueror.ModClient"
+		],
+		"server": [
+			"worldgate.conqueror.ModServer"
+		]
+	},
+	"mixins": [
+		"worldgate-conqueror.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"extensibleenums": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

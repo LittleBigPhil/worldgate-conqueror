@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:min",
+  "argument1": "worldgate-conqueror:cave/cheese_huge_dense",
+  "argument2":{
+    "type": "minecraft:min",
+    "argument1": "worldgate-conqueror:cave/cheese_big_dense",
+    "argument2": "worldgate-conqueror:cave/cheese_small_dense"
+  }
+}

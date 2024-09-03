@@ -1,0 +1,26 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Internal datapack for Worldgate Conqueror"
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "minecraft",
+        "path": "recipe/(?!oak_planks|stick|oak_door|oak_trapdoor|oak_sign|oak_slab|oak_stairs|oak_fence|oak_fence_gate|cobblestone_slab|cobblestone_stairs|cobblestone_wall|white_bed|glass).*"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "advancement/(?!recipes/).*"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "loot_table/entities/.*"
+      },
+      {
+        "namespace": "minecraft",
+        "path": "worldgen/world_preset/.*"
+      }
+    ]
+  }
+}

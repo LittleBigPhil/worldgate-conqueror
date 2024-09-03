@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "misc",
+  "cookingtime": 600,
+  "experience": 0.15,
+  "ingredient": {
+    "item": "worldgate-conqueror:chitin"
+  },
+  "result": {
+    "id": "worldgate-conqueror:dried_chitin"
+  }
+}

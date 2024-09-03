@@ -1,0 +1,11 @@
+{
+  "type": "worldgate-conqueror:surface_world",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "worldgate-conqueror:crystal"
+    },
+    "settings": "worldgate-conqueror:crystal"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "worldgate-conqueror:limestone",
+    "worldgate-conqueror:granite",
+    "worldgate-conqueror:basalt",
+    "worldgate-conqueror:sandstone",
+    "worldgate-conqueror:red_sandstone"
+  ]
+}

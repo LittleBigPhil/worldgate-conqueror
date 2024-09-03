@@ -1,0 +1,3 @@
+gamerule naturalRegeneration false
+gamerule doTraderSpawning false
+gamerule doPatrolSpawning false

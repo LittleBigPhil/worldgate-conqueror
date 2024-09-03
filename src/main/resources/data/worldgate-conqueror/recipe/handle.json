@@ -1,0 +1,25 @@
+{
+  "type": "worldgate-conqueror:modular_recipe",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "worldgate-conqueror:flax"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "-#",
+    "-#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "worldgate-conqueror:tool_handle",
+    "components": {
+      "worldgate-conqueror:tool_component": {
+        "handle": "Handle"
+      }
+    }
+  }
+}

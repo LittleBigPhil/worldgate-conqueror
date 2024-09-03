@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "weight": 1,
+      "structure": "worldgate-conqueror:giant_tree"
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 772500080,
+    "spacing": 9,
+    "separation": 5
+  }
+}

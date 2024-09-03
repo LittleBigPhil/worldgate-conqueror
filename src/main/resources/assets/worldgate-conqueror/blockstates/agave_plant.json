@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "worldgate-conqueror:block/agave_plant_age_0"
+    },
+    "age=1": {
+      "model": "worldgate-conqueror:block/agave_plant_age_1"
+    },
+    "age=2": {
+      "model": "worldgate-conqueror:block/agave_plant_age_2"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "fallback": "worldgate-conqueror:tree/fallback",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "worldgate-conqueror:tree/entrance",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 100,
+      "element": {
+        "location": "worldgate-conqueror:tree/entrance_short",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

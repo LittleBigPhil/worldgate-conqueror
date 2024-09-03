@@ -1,0 +1,32 @@
+{
+  "feature": "worldgate-conqueror:cobble_boulder",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:weighted_list",
+        "distribution": [
+          {
+            "data": 1,
+            "weight": 5
+          },
+          {
+            "data": 4,
+            "weight": 1
+          },
+          {
+            "data": 0,
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    }
+  ]
+}

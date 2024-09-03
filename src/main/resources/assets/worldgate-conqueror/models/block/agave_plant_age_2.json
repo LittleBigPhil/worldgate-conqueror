@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "worldgate-conqueror:block/agave_plant_age_2"
+  }
+}

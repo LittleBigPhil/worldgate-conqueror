@@ -1,0 +1,11 @@
+{
+  "type": "worldgate-conqueror:affine",
+  "scale": 15,
+  "offset": -6,
+  "input": {
+    "type": "minecraft:noise",
+    "noise": "worldgate-conqueror:homeworld/step_offset",
+    "xz_scale": 1,
+    "y_scale": 0
+  }
+}

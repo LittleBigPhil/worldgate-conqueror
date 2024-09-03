@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "worldgate-conqueror:rawhide_cuirass"
+    },
+    "X": {
+      "item": "worldgate-conqueror:gambeson_jacket"
+    }
+  },
+  "pattern": [
+    "#X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "worldgate-conqueror:padded_rawhide_cuirass"
+  }
+}

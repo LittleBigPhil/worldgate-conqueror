@@ -1,0 +1,32 @@
+{
+  "parent": "worldgate-conqueror:worldgates/get_dowsing_rod",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.worldgate-conqueror.worldgates.get_glass.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:glass"
+    },
+    "title": {
+      "translate": "advancements.worldgate-conqueror.worldgates.get_glass.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

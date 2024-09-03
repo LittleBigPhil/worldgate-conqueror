@@ -1,0 +1,15 @@
+{
+  "type": "worldgate-conqueror:affine",
+  "scale": 1.25,
+  "input": {
+    "type": "worldgate-conqueror:linear_blend",
+    "amount": 0.25,
+    "argument1": "worldgate-conqueror:desert/continents",
+    "argument2": {
+      "type": "minecraft:noise",
+      "noise": "worldgate-conqueror:desert/height",
+      "xz_scale": 1,
+      "y_scale": 0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "worldgate-conqueror:affine",
+  "offset": 0.7,
+  "scale": 2,
+  "input": {
+    "type": "worldgate-conqueror:linear_blend",
+    "amount": 0.8,
+    "argument1": "worldgate-conqueror:homeworld/erosion",
+    "argument2": {
+      "type": "minecraft:noise",
+      "noise": "worldgate-conqueror:homeworld/smoothness",
+      "xz_scale": 1,
+      "y_scale": 0
+    }
+  }
+}

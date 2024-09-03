@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:add",
+  "argument1": -0.05,
+  "argument2": {
+    "type": "minecraft:abs",
+    "argument": "worldgate-conqueror:super_cheese_caves"
+  }
+}

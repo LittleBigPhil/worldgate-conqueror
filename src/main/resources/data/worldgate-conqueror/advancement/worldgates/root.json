@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "unlock_right_away": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancements.worldgate-conqueror.worldgates.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:map"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.worldgate-conqueror.worldgates.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "unlock_right_away"
+    ]
+  ]
+}

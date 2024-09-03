@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": "worldgate-conqueror:super_boundary_caves",
+  "argument2": "worldgate-conqueror:super_boundary_caves_alt"
+}

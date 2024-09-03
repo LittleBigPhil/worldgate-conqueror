@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:add",
+  "argument1": "worldgate-conqueror:cave/bedrock_protection",
+  "argument2": "worldgate-conqueror:cave/fettuccine_alfredo_interpolated"
+}

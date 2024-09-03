@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:flint"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "worldgate-conqueror:tool_head",
+    "components": {
+      "worldgate-conqueror:tool_component": {
+        "head": "Sword"
+      }
+    }
+  }
+}

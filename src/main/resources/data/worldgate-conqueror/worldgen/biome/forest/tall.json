@@ -1,0 +1,104 @@
+{
+  "temperature": 0.7,
+  "downfall": 0.8,
+  "has_precipitation": true,
+  "effects": {
+    "fog_color": 12638463,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.jungle"
+    },
+    "sky_color": 7972607,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "carvers": {
+    "air": []
+  },
+  "features": [
+    [
+      "worldgate-conqueror:bedrock_floor_placed"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:spring_water"
+    ],
+    [
+      "worldgate-conqueror:trees_canopy",
+      "worldgate-conqueror:bushes_homeworld",
+      "worldgate-conqueror:grass_thick"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ],
+  "spawn_costs": {
+    "worldgate-conqueror:plain_spider": {
+      "charge": 1.0,
+      "energy_budget": 0.1
+    },
+    "worldgate-conqueror:neurotoxic_spider": {
+      "charge": 1.0,
+      "energy_budget": 0.1
+    },
+    "worldgate-conqueror:hemorrhagic_spider": {
+      "charge": 1.0,
+      "energy_budget": 0.1
+    },
+    "worldgate-conqueror:debilitating_spider": {
+      "charge": 1.0,
+      "energy_budget": 0.1
+    }
+  },
+  "spawners": {
+    "ambient": [ ],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [
+      {
+        "type": "worldgate-conqueror:plain_spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "worldgate-conqueror:neurotoxic_spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "worldgate-conqueror:hemorrhagic_spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      },
+      {
+        "type": "worldgate-conqueror:debilitating_spider",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 100
+      }
+    ],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  }
+}
+
+

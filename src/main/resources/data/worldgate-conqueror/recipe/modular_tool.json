@@ -1,0 +1,25 @@
+{
+  "type": "worldgate-conqueror:modular_recipe",
+  "category": "tools",
+  "key": {
+    "X": {
+      "item": "worldgate-conqueror:tool_head"
+    },
+    "-": {
+      "item": "worldgate-conqueror:flax"
+    },
+    "#": {
+      "item": "worldgate-conqueror:tool_handle"
+    }
+  },
+  "pattern": [
+    "-X",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "worldgate-conqueror:modular_tool",
+    "components": {
+    }
+  }
+}

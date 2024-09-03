@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "worldgate-conqueror:soil",
+    "worldgate-conqueror:grass_block",
+    "worldgate-conqueror:sand",
+    "worldgate-conqueror:red_sand",
+    "worldgate-conqueror:gravel"
+  ]
+}

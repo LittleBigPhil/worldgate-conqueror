@@ -1,0 +1,32 @@
+{
+  "parent": "worldgate-conqueror:worldgates/get_dowsing_rod",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "worldgate-conqueror:sandstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.worldgate-conqueror.worldgates.get_sandstone.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "worldgate-conqueror:sandstone"
+    },
+    "title": {
+      "translate": "advancements.worldgate-conqueror.worldgates.get_sandstone.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ]
+}

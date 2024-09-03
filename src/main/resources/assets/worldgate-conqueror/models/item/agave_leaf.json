@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/kelp",
+  "textures": {
+    "layer0": "worldgate-conqueror:item/agave_leaf"
+  }
+}

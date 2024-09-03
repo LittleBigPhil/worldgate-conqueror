@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "worldgate-conqueror:agave_leaf",
+    "worldgate-conqueror:agave_plant",
+    "worldgate-conqueror:sugar_cane",
+    "worldgate-conqueror:leaves",
+    "worldgate-conqueror:short_grass",
+    "worldgate-conqueror:tall_grass"
+  ]
+}

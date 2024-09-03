@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "features": [
+      {
+        "feature": "worldgate-conqueror:tree_short_placed",
+        "chance": 1.0
+      }
+    ],
+    "default": "worldgate-conqueror:tree_short_placed"
+  }
+}

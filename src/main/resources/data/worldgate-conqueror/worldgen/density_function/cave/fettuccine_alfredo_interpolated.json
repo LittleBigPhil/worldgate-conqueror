@@ -1,0 +1,6 @@
+{
+  "type": "worldgate-conqueror:linear_blend",
+  "amount": "worldgate-conqueror:cave/continents",
+  "argument1": "worldgate-conqueror:cave/fettuccine_alfredo_dense",
+  "argument2": "worldgate-conqueror:cave/fettuccine_alfredo_sparse_topped"
+}

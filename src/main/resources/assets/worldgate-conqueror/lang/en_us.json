@@ -1,0 +1,127 @@
+{
+  "item.worldgate-conqueror.bandage": "Bandage",
+  "item.worldgate-conqueror.dowsing_rod": "Dowsing Rod",
+  "item.worldgate-conqueror.bucket": "Bucket",
+  "item.worldgate-conqueror.water_bucket": "Water Bucket",
+
+  "block.worldgate-conqueror.short_grass": "Short Grass",
+  "block.worldgate-conqueror.tall_grass": "Tall Grass",
+  "item.worldgate-conqueror.flax": "Flax",
+  "block.minecraft.white_wool": "Linen",
+  "block.minecraft.white_bed": "Bed",
+
+  "item.worldgate-conqueror.husk_hide": "Husk Hide",
+  "item.worldgate-conqueror.fluff": "Fluff",
+  "item.worldgate-conqueror.cattail_seed": "Cattail Seed",
+  "item.worldgate-conqueror.boiled_rawhide": "Boiled Rawhide",
+  "item.worldgate-conqueror.needle_and_thread": "Needle & Thread",
+  "block.worldgate-conqueror.quilted_linen": "Quilted Linen",
+
+  "item.worldgate-conqueror.gambeson_jacket": "Gambeson Jacket",
+  "item.worldgate-conqueror.gambeson_trousers": "Gambeson Trousers",
+  "item.worldgate-conqueror.rawhide_cuirass": "Boiled Rawhide Cuirass",
+  "item.worldgate-conqueror.rawhide_greaves": "Boiled Rawhide Greaves",
+  "item.worldgate-conqueror.padded_rawhide_cuirass": "Padded Rawhide Cuirass",
+  "item.worldgate-conqueror.padded_rawhide_greaves": "Padded Rawhide Greaves",
+  "item.worldgate-conqueror.boots_of_speed": "Boots of Speed",
+  "item.worldgate-conqueror.boots_of_leaping": "Boots of Leaping",
+  "item.worldgate-conqueror.flippers": "Flippers",
+
+  "item.worldgate-conqueror.ring_of_strength": "Ring of Strength",
+  "item.worldgate-conqueror.ring_of_mind": "Ring of Mind",
+  "item.worldgate-conqueror.ring_of_hardiness": "Ring of Hardiness",
+  "item.worldgate-conqueror.ring_of_night_vision": "Ring of Night Vision",
+
+  "item.worldgate-conqueror.rawhide_glove": "Boiled Rawhide Glove",
+
+  "item.worldgate-conqueror.chitin": "Chitin",
+  "item.worldgate-conqueror.dried_chitin": "Dried Chitin",
+  "item.worldgate-conqueror.chitin_cuirass": "Chitin Cuirass",
+  "item.worldgate-conqueror.chitin_greaves": "Chitin Greaves",
+  "item.worldgate-conqueror.padded_chitin_cuirass": "Padded Chitin Cuirass",
+  "item.worldgate-conqueror.padded_chitin_greaves": "Padded Chitin Greaves",
+
+  "item.worldgate-conqueror.agave_seeds": "Agave Seeds",
+  "item.worldgate-conqueror.agave_leaf": "Agave Leaf",
+  "item.worldgate-conqueror.agave_fruit": "Agave Fruit",
+
+  "block.worldgate-conqueror.glowing_mushroom": "Glowing Mushroom",
+
+  "block.worldgate-conqueror.campfire": "Campfire",
+  "container.worldgate-conqueror.campfire": "Campfire",
+  "gui.worlgate-conqueror.recipebook.toggleRecipes.campfireable": "Show Campfireable",
+
+  "block.worldgate-conqueror.log": "Log",
+  "block.worldgate-conqueror.sapling": "Sapling",
+  "block.worldgate-conqueror.leaves": "Leaves",
+
+  "block.worldgate-conqueror.sand": "Sand",
+  "block.worldgate-conqueror.red_sand": "Red Sand",
+  "block.worldgate-conqueror.gravel": "Gravel",
+
+  "block.worldgate-conqueror.soil": "Soil",
+  "block.worldgate-conqueror.grass_block": "Grass Block",
+
+  "block.worldgate-conqueror.limestone": "Limestone",
+  "block.worldgate-conqueror.granite": "Granite",
+  "block.worldgate-conqueror.sandstone": "Sandstone",
+  "block.worldgate-conqueror.red_sandstone": "Red Sandstone",
+
+  "block.worldgate-conqueror.sugar_cane": "Sugar Cane",
+  "item.worldgate-conqueror.sugar": "Sugar",
+
+  "block.minecraft.oak_planks": "Planks",
+  "block.minecraft.oak_door": "Door",
+  "block.minecraft.oak_slab": "Wood Slab",
+  "block.minecraft.oak_stairs": "Wood Stairs",
+  "block.minecraft.oak_sign": "Sign",
+  "block.minecraft.oak_fence": "Fence",
+  "block.minecraft.oak_fence_gate": "Fence Gate",
+  "block.minecraft.oak_trapdoor": "Trapdoor",
+
+  "item.minecraft.armor_stand": "Target Dummy",
+
+  "attribute.worldgate-conqueror.blunt_resistance": "Blunt Resist",
+  "attribute.worldgate-conqueror.pierce_resistance": "Pierce Resist",
+  "attribute.worldgate-conqueror.slash_resistance": "Slash Resist",
+  "attribute.worldgate-conqueror.armor_efficiency": "Armor Efficiency",
+  "attribute.worldgate-conqueror.max_food": "Max Food",
+  "attribute.worldgate-conqueror.item_switch_speed": "Switch Speed",
+  "attribute.worldgate-conqueror.water_movement_speed": "Water Movement Speed",
+  "attribute.worldgate-conqueror.damage_immunity_time": "Immunity Time",
+  "attribute.worldgate-conqueror.strength": "Strength",
+  "attribute.worldgate-conqueror.mind": "Mind",
+  "attribute.worldgate-conqueror.hardiness": "Hardiness",
+
+  "item.modifiers.accessory": "When as Accessory:",
+
+  "effect.worldgate-conqueror.stunned": "Stunned",
+  "effect.worldgate-conqueror.grappled": "Grappled",
+  "effect.worldgate-conqueror.darkness": "Darkness",
+  "effect.worldgate-conqueror.toxic_poison": "Toxic Poison",
+  "effect.worldgate-conqueror.sluggish": "Sluggish",
+  "effect.worldgate-conqueror.paralyzed": "Paralyzed",
+  "effect.worldgate-conqueror.weakness": "Weakness",
+  "effect.worldgate-conqueror.bleeding": "Bleeding",
+  "effect.worldgate-conqueror.hemophilia": "Hemophilia",
+  "effect.worldgate-conqueror.nausea": "Nausea",
+  "effect.worldgate-conqueror.hunger": "Hunger",
+
+  "entity.worldgate-conqueror.plain_spider": "Spider",
+  "entity.worldgate-conqueror.neurotoxic_spider": "Neurotoxic Spider",
+  "entity.worldgate-conqueror.hemorrhagic_spider": "Hemorrhagic Spider",
+  "entity.worldgate-conqueror.debilitating_spider": "Debilitating Spider",
+
+  "advancements.worldgate-conqueror.worldgates.root.title": "Worldgates",
+  "advancements.worldgate-conqueror.worldgates.root.description": "Fulfill your destiny as The Worldgate Traveller.",
+  "advancements.worldgate-conqueror.worldgates.get_dowsing_rod.title": "A Necessary Tool",
+  "advancements.worldgate-conqueror.worldgates.get_dowsing_rod.description": "Craft a dowsing rod.",
+  "advancements.worldgate-conqueror.worldgates.get_sandstone.title": "A Wasteland",
+  "advancements.worldgate-conqueror.worldgates.get_sandstone.description": "Gather sandstone.",
+  "advancements.worldgate-conqueror.worldgates.get_log.title": "A Forest",
+  "advancements.worldgate-conqueror.worldgates.get_log.description": "Gather logs.",
+  "advancements.worldgate-conqueror.worldgates.get_cobblestone.title": "A Cave",
+  "advancements.worldgate-conqueror.worldgates.get_cobblestone.description": "Gather cobblestone.",
+  "advancements.worldgate-conqueror.worldgates.get_glass.title": "A Magical Sight",
+  "advancements.worldgate-conqueror.worldgates.get_glass.description": "Gather glass."
+}

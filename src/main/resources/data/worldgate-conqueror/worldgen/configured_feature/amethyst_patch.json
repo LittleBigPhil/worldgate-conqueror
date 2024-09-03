@@ -1,0 +1,89 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 96,
+    "xz_spread": 7,
+    "y_spread": 3,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 4,
+                "data": {
+                  "Name": "minecraft:amethyst_cluster",
+                  "Properties": {
+                    "facing": "up",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 4,
+                "data": {
+                  "Name": "minecraft:amethyst_cluster",
+                  "Properties": {
+                    "facing": "down",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "minecraft:amethyst_cluster",
+                  "Properties": {
+                    "facing": "north",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "minecraft:amethyst_cluster",
+                  "Properties": {
+                    "facing": "south",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "minecraft:amethyst_cluster",
+                  "Properties": {
+                    "facing": "east",
+                    "waterlogged": "false"
+                  }
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "minecraft:amethyst_cluster",
+                  "Properties": {
+                    "facing": "west",
+                    "waterlogged": "false"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

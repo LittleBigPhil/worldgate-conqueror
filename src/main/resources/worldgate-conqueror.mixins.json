@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "package": "worldgate.conqueror.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ArmorStandEntityMixin",
+    "AttributeModifierSlotMixin",
+    "EntityMixin",
+    "InGameHudMixin",
+    "ItemRendererMixin",
+    "LivingEntityMixin",
+    "PlayerScreenHandlerMixin",
+    "RecipeBookCategoryMixin",
+    "RecipeBookOptionsMixin",
+    "ScreenHandlerAccessor",
+    "SpreadableBlockMixin",
+    "WaterFluidMixin",
+    "mob.AbstractSkeletonMixin",
+    "mob.HostileEntityMixin",
+    "mob.HuskEntityMixin",
+    "mob.LandPathNodeMakerMixin",
+    "mob.MobEntityMixin",
+    "mob.PathAwareEntityMixin",
+    "mob.SpiderEntityMixin",
+    "mob.ZombieEntityMixin",
+    "player.HungerManagerMixin",
+    "player.LivingEntityAccessor",
+    "player.PlayerEntityMixin",
+    "player.PlayerInventoryMixin",
+    "player.ServerPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "BackgroundRendererMixin",
+    "GameRendererMixin",
+    "RecipeBookGroupMixin",
+    "player.ClientPlayerEntityMixin"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "key": {
+    "#": {
+      "item": "worldgate-conqueror:chitin_greaves"
+    },
+    "X": {
+      "item": "worldgate-conqueror:gambeson_trousers"
+    }
+  },
+  "pattern": [
+    "#X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "worldgate-conqueror:padded_chitin_greaves"
+  }
+}

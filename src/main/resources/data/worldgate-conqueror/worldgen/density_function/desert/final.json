@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "worldgate-conqueror:y_mixed_gradient",
+    "from_y": 0,
+    "to_y": 192,
+    "from_value": 2,
+    "to_value": -2,
+    "step_size": 0.1,
+    "smoothness": 1,
+    "offset": 0
+  },
+  "argument2": "worldgate-conqueror:desert/height"
+}
