@@ -175,7 +175,7 @@ public class ModItems {
                     .build()
     );
 
-    public static final Item BREATH_WEAPON_ITEM = registerItem("flamethrower",
+    public static final Item BREATH_WEAPON_ITEM = registerItem("breath_weapon_item",
             new BreathWeaponItem(new Item.Settings().maxCount(1))
     );
 

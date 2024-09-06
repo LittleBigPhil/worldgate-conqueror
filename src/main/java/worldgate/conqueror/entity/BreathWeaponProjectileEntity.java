@@ -8,12 +8,8 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.projectile.AbstractFireballEntity;
 import net.minecraft.entity.projectile.ExplosiveProjectileEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
 import net.minecraft.particle.EntityEffectParticleEffect;
@@ -41,7 +37,7 @@ public class BreathWeaponProjectileEntity extends ExplosiveProjectileEntity impl
         int lifetime();
         int skipRenderFrames();
     }
-    private static final Map<String, BreathType> breathTypes = new HashMap<String, BreathType>();
+    private static final Map<String, BreathType> breathTypes = new HashMap<>();
     public static BreathType registerBreathType(BreathType breathType) {
         breathTypes.put(breathType.name(), breathType);
         return breathType;
@@ -94,7 +90,7 @@ public class BreathWeaponProjectileEntity extends ExplosiveProjectileEntity impl
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
-        if (this.getWorld() instanceof ServerWorld serverWorld && entityHitResult.getEntity() instanceof LivingEntity livingEntity) {
+        if (this.getWorld() instanceof ServerWorld && entityHitResult.getEntity() instanceof LivingEntity livingEntity) {
             //livingEntity.setOnFireFor(5); // Set entity on fire for 5 seconds
             for (var effect : getBreathType().statusEffects()) {
                 ((StatusEffectTarget) livingEntity).addStatusEffectResistable(effect.effectInstance(), this.getOwner(), effect.strength());
@@ -133,7 +129,7 @@ public class BreathWeaponProjectileEntity extends ExplosiveProjectileEntity impl
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
-        if (nbt.contains("BreathType", NbtElement.COMPOUND_TYPE)) {
+        if (nbt.contains("BreathType", NbtElement.STRING_TYPE)) {
             this.setBreathTypeName(nbt.getString("BreathType"));
         }
     }
@@ -163,23 +159,25 @@ public class BreathWeaponProjectileEntity extends ExplosiveProjectileEntity impl
     @Override
     public void tick() {
         super.tick();
-        if (this.age > getBreathType().lifetime()) {
-            this.discard();
-        }
+        if (getBreathType() != null) {
+            if (this.age > getBreathType().lifetime()) {
+                this.discard();
+            }
 
-        Entity owner = this.getOwner();
-        var isValidOwner = (owner == null || !owner.isRemoved());
-        if (this.getWorld().isClient || isValidOwner && this.getWorld().isChunkLoaded(this.getBlockPos())) {
-            var particleSpawnPos = this.getVelocity().multiply(.75).add(this.getPos());
+            Entity owner = this.getOwner();
+            var isValidOwner = (owner == null || !owner.isRemoved());
+            if (this.getWorld().isClient || isValidOwner && this.getWorld().isChunkLoaded(this.getBlockPos())) {
+                var particleSpawnPos = this.getVelocity().multiply(.75).add(this.getPos());
 
-            var color = getBreathType().color();
-            var colorWithAlpha = ColorHelper.Argb.withAlpha(255, color); // Taken from the StatusEffect constructor
-            this.getWorld().addParticle(EntityEffectParticleEffect.create(ModParticles.BreathWeaponParticle, colorWithAlpha), particleSpawnPos.getX(), particleSpawnPos.getY(), particleSpawnPos.getZ(), 0.0, 0.0, 0.0);
+                var color = getBreathType().color();
+                var colorWithAlpha = ColorHelper.Argb.withAlpha(255, color); // Taken from the StatusEffect constructor
+                this.getWorld().addParticle(EntityEffectParticleEffect.create(ModParticles.BreathWeaponParticle, colorWithAlpha), particleSpawnPos.getX(), particleSpawnPos.getY(), particleSpawnPos.getZ(), 0.0, 0.0, 0.0);
+            }
         }
     }
     @Override
     public boolean shouldRender(double distance) {
-        if (this.age < getBreathType().skipRenderFrames()) {
+        if (getBreathType() == null || this.age < getBreathType().skipRenderFrames()) {
             return false;
         }
 
