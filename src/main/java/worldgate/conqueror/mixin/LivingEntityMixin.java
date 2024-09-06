@@ -486,17 +486,19 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
     }
     @Redirect(method = "damage", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/LivingEntity;timeUntilRegen:I", opcode = Opcodes.PUTFIELD))
     private void setTimeUntilRegen(LivingEntity entity, int defaultTimeUntilRegen) {
-        entity.timeUntilRegen = 5 + (int) entity.getAttributeValue(ModEntityAttributes.DAMAGE_IMMUNITY_TIME);
+        entity.timeUntilRegen = 10 + (int) entity.getAttributeValue(ModEntityAttributes.DAMAGE_IMMUNITY_TIME);
     }
     @Redirect(method = "onDamaged", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/LivingEntity;timeUntilRegen:I", opcode = Opcodes.PUTFIELD))
     private void setTimeUntilRegen2(LivingEntity entity, int defaultTimeUntilRegen) {
-        entity.timeUntilRegen = 5 + (int) entity.getAttributeValue(ModEntityAttributes.DAMAGE_IMMUNITY_TIME);
+        entity.timeUntilRegen = 10 + (int) entity.getAttributeValue(ModEntityAttributes.DAMAGE_IMMUNITY_TIME);
     }
 
     // This affects projectiles, thorns, potions of harming, ender dragon breath attack, etc.
     // Could be achieved by adding the damage type tag corresponding to no knockback, but this is easier.
     @Redirect(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;takeKnockback(DDD)V"))
     private void dontTakeKnockback(LivingEntity instance, double strength, double x, double z) {}
+    @Redirect(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;scheduleVelocityUpdate()V"))
+    private void dontScheduleVelocityUpdate(LivingEntity instance) {}
 
     @Shadow @Final private static TrackedData<Float> HEALTH;// = DataTracker.registerData(LivingEntity.class, TrackedDataHandlerRegistry.FLOAT);
 

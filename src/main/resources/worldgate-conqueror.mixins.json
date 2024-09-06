@@ -35,6 +35,7 @@
   "client": [
     "BackgroundRendererMixin",
     "GameRendererMixin",
+    "InGameOverlayRendererMixin",
     "RecipeBookGroupMixin",
     "player.ClientPlayerEntityMixin"
   ]
