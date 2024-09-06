@@ -5,13 +5,13 @@
 	"name": "Worldgate Conqueror",
 	"description": "Travel the worldgates! Loot the worlds! Build your farms! Become the Worldgate Conqueror!",
 	"authors": [
-		"Me!"
+		"Phillip Roshon"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT-0",
 	"icon": "assets/worldgate-conqueror/icon.png",
 	"accessWidener" : "worldgate-conqueror.accesswidener",
 	"environment": "*",
@@ -37,6 +37,7 @@
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*",
+		"customportalapi": "*",
 		"extensibleenums": "*"
 	},
 	"suggests": {
