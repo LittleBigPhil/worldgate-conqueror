@@ -19,6 +19,15 @@ repositories {
 	flatDir {
 		dirs '../customportalapi/build/libs'
 	}
+	maven {
+		name = "Kyrptonaught's Maven"
+		url = "https://maven.kyrptonaught.dev"
+	}
+
+	maven { // Has more up to date version of Kyrptonaught's customportalapi, since that's not updated
+		name = "Raeven's Maven"
+		url = "https://maven.raeven.fr/releases"
+	}
 
 	maven {
 		name = "Fuzs Mod Resources"
@@ -43,7 +52,7 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modImplementation fileTree(dir: '../customportalapi/build/libs', include: ['*.jar'])
+	modImplementation include("net.kyrptonaught:customportalapi:0.0.1-beta66-1.21")
 
 	modImplementation include("fuzs.extensibleenums:extensibleenums-fabric:21.0.0") // e.g. 4.0.0 for Minecraft 1.19
 }
