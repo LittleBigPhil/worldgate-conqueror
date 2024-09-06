@@ -76,7 +76,7 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
         tickEquipment();
     }
 
-    private void tickEquipment() {
+    @Unique private void tickEquipment() {
         for (var slot : EquipmentSlot.values()) {
             var item = entity().getEquippedStack(slot).getItem();
             if (item instanceof CustomArmor armorItem && (
@@ -118,10 +118,8 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
         }
     }
     @Shadow protected abstract boolean shouldSwimInFluids();
-    @Shadow protected abstract float getBaseMovementSpeedMultiplier();
     @Shadow private SoundEvent getFallSound(int distance) { return null; }
 
-    @Unique private static float DEFAULT_FRICTION = .91f;
     @Unique private static FluidSettings WATER_SETTINGS = new FluidSettings(.8f, .4f, .75f);
     @Unique private static FluidSettings LAVA_SETTINGS = new FluidSettings(.6f, .25f, .75f);
     @Overwrite // This copies what's already there, and then separates it into methods, so that I can modify those methods individually.
@@ -186,7 +184,7 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
         double i = Math.sqrt(vec3d5.x * vec3d5.x + vec3d5.z * vec3d5.z);
         double j = vec3d4.horizontalLength();
         double k = vec3d5.length();
-        double l = Math.cos((double)fx);
+        double l = Math.cos(fx);
         l = l * l * Math.min(1.0, k / 0.4);
         vec3d4 = this.getVelocity().add(0.0, gravityStrength * (-1.0 + l * 0.75), 0.0);
         if (vec3d4.y < 0.0 && i > 0.0) {
@@ -223,12 +221,25 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
     @Unique void travelNormal(Vec3d movementInput, double gravityStrength) {
         var entity = (LivingEntity)(Object) this;
         BlockPos blockPos = this.getVelocityAffectingPos();
-        float slipperiness = this.getWorld().getBlockState(blockPos).getBlock().getSlipperiness();
+        var moveSpeed = this.getMovementSpeed();
+        var slipperiness = this.getWorld().getBlockState(blockPos).getBlock().getSlipperiness();
         if (!this.isOnGround()) {
             slipperiness = .989f; // Equivalent to the most slippery block: blue ice.
         }
+        if (entity() instanceof PlayerEntity player && player.getAbilities().flying) {
+            slipperiness = .6f; // Equivalent to the default block.
+            moveSpeed *= 2f;
+            if (entity().isSprinting()) {
+                moveSpeed *= 2f;
+            }
+            if (entity().isSneaking()) {
+                // For some reason sneaking modifies the movementInput instead of the movementSpeed, so this fixes that.
+                var inputFactor = 0.294f;
+                moveSpeed /= inputFactor;
+            }
+        }
 
-        updateVelocityBeforeMovementNormal(movementInput, this.getVelocity(), this.getMovementSpeed(), slipperiness);
+        updateVelocityBeforeMovementNormal(movementInput, this.getVelocity(), moveSpeed, slipperiness);
         Vec3d appliedMovementSpeed = moveNormal();
 
         double finalYVelocity = appliedMovementSpeed.y;
@@ -300,11 +311,9 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
     /**
      *
      * @param movementInput >= 0
-     * @param currentVelocity
      * @param moveSpeed >= 0
      * @param slipperiness (0, 1)
      * @param intentionality (0, 1)
-     * @return
      */
     @Unique private double getVelocityWithTraction1D(double movementInput, double currentVelocity, double moveSpeed, double slipperiness, double intentionality) {
         var targetVelocity = movementInput * moveSpeed;
@@ -448,17 +457,16 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
         if (!RandomHelper.chance(entity().getRandom(), hitRate)) {
             cir.setReturnValue(false);
             cir.cancel();
-            return;
         }
     }
 
-    @Inject(method = "applyDamage", at = @At("HEAD"), cancellable = false)
+    @Inject(method = "applyDamage", at = @At("HEAD"))
     public void applyDamage(DamageSource source, float amount, CallbackInfo ci) {
         LivingEntity self = (LivingEntity) (Object) this;
         if (!this.isInvulnerableTo(source)) {
             float postMitigation = this.applyArmorToDamage(source, amount);
             postMitigation = this.modifyAppliedDamage(source, postMitigation);
-            TextDisplayEntity.spawnDamageNumber(((Entity)(Object)this), source, postMitigation);
+            TextDisplayEntity.spawnDamageNumber(entity(), source, postMitigation);
 
             ((Grappler) self).tryFlinch(postMitigation);
         }
@@ -496,9 +504,7 @@ public abstract class LivingEntityMixin extends Entity implements GrappleTarget,
 
     @Shadow public abstract float getMovementSpeed();
 
-    @Shadow private float movementSpeed;
-
-    @Inject(method = "readCustomDataFromNbt", at=@At("TAIL"), cancellable = false)
+    @Inject(method = "readCustomDataFromNbt", at=@At("TAIL"))
     public void readCustomDataFromNbt(NbtCompound nbt, CallbackInfo ci) {
         if (nbt.contains("Health", NbtElement.NUMBER_TYPE)) {
             // not using setHealth, so it doesn't get clamped, so max health changes don't break on loading.
