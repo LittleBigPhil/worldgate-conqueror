@@ -1,7 +1,9 @@
 package worldgate.conqueror.entity;
 
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityType;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
@@ -49,15 +51,25 @@ public class ModEntities {
     public static final EntityType<SpiderVariantEntity> PLAIN_SPIDER = registerEntityType(
             "plain_spider",
             SpiderVariantEntity.entityType(SpiderVariantEntity.PoisonType.NONE)
-    );public static final EntityType<SpiderVariantEntity> NEUROTOXIC_SPIDER = registerEntityType(
+    );
+    public static final EntityType<SpiderVariantEntity> NEUROTOXIC_SPIDER = registerEntityType(
             "neurotoxic_spider",
             SpiderVariantEntity.entityType(SpiderVariantEntity.PoisonType.NEUROTOXIC)
-    );public static final EntityType<SpiderVariantEntity> HEMORRHAGIC_SPIDER = registerEntityType(
+    );
+    public static final EntityType<SpiderVariantEntity> HEMORRHAGIC_SPIDER = registerEntityType(
             "hemorrhagic_spider",
             SpiderVariantEntity.entityType(SpiderVariantEntity.PoisonType.HEMORRHAGIC)
-    );public static final EntityType<SpiderVariantEntity> DEBILITATING_SPIDER = registerEntityType(
+    );
+    public static final EntityType<SpiderVariantEntity> DEBILITATING_SPIDER = registerEntityType(
             "debilitating_spider",
             SpiderVariantEntity.entityType(SpiderVariantEntity.PoisonType.DEBILITATING)
+    );
+    public static final EntityType<DrakeEntity> DRAKE = registerEntityType(
+            "drake",
+            EntityType.Builder.create(DrakeEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(1f, 1f) // Based on nothing in particular.
+                    .eyeHeight(0.5F) // Based on nothing in particular.
+                    .build()
     );
 
     static {
@@ -65,6 +77,7 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(NEUROTOXIC_SPIDER, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(HEMORRHAGIC_SPIDER, SpiderEntity.createSpiderAttributes());
         FabricDefaultAttributeRegistry.register(DEBILITATING_SPIDER, SpiderEntity.createSpiderAttributes());
+        FabricDefaultAttributeRegistry.register(DRAKE, DrakeEntity.createDrakeAttributes());
     }
     //public static final EntityModelLayer SPIDER_LAYER = new EntityModelLayer(Identifier.of(WorldgateConqueror.MOD_ID, "spider"), "main");
 
@@ -88,11 +101,15 @@ public class ModEntities {
 
         HandledScreens.register(ModEntities.CAMPFIRE_SCREEN_HANDLER, CampfireScreen::new);
 
+        //WorldgateConqueror.LOGGER.info("Registering entity layers for {}", WorldgateConqueror.MOD_ID);
+        EntityModelLayerRegistry.registerModelLayer(ModModelLayers.DRAKE, DrakeEntityModel::getTexturedModelData);
+
+        //WorldgateConqueror.LOGGER.info("Registering entity renderers for {}", WorldgateConqueror.MOD_ID);
         EntityRendererRegistry.register(ModEntities.PLAIN_SPIDER, SpiderVariantEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.NEUROTOXIC_SPIDER, SpiderVariantEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.HEMORRHAGIC_SPIDER, SpiderVariantEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.DEBILITATING_SPIDER, SpiderVariantEntityRenderer::new);
-        //SpiderEntityRenderer
-        //EntityModelLayerRegistry.registerModelLayer(ModEntities.SPIDER_LAYER, SpiderEntityModel::getTexturedModelData);
+
+        EntityRendererRegistry.register(ModEntities.DRAKE, DrakeEntityRenderer::new); // Makes the game freeze on load
     }
 }
